@@ -1,0 +1,38 @@
+.FooterLinks {
+  max-width: 100%;
+  width: 100%;
+  max-height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .FooterLinks_ul {
+    height: 80px;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      max-width: 300px;
+      max-height: 30px;
+      transition: all ease-in 0.3s;
+
+      a {
+        font-family: "Roboto";
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--primary-color);
+        transition: all ease-in 0.3s;
+
+        &:hover {
+          transition: all ease-in 0.3s;
+          color: var(--primary-hover-color);
+        }
+      }
+    }
+  }
+}

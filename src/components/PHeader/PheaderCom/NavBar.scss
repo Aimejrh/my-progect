@@ -1,0 +1,159 @@
+// button {
+//   background: #d56f6f;
+// }
+.logoImg {
+  width: 60px !important;
+  height: 60px !important;
+
+  border-radius: 40px;
+
+  background: #777373;
+  img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .navUl {
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        font-size: 26px;
+        font-weight: 500;
+        font-family: "Roboto";
+      }
+    }
+  }
+  .nav_Language {
+    border: none;
+  }
+}
+// .toggle {
+//   display: none;
+// }
+.HeaderNav {
+  display: none;
+  top: 300px;
+  border: 1px solid bisque;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #8a3838;
+  z-index: 10;
+  ul {
+    width: 20px;
+    height: 20px;
+    font-family: "Roboto";
+  }
+}
+.container_search {
+  width: 300px;
+  height: 40px;
+  .search {
+    padding: 5px;
+    width: 300px;
+    height: 20px;
+  }
+}
+.hedContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 100px) {
+}
+
+/* CustomSelect.css */
+.Select_Box {
+  display: flex;
+  max-width: 260px;
+}
+
+.custom-select-container {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  ul {
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  background-color: #fff;
+  // border: 1px solid #ccc;
+  cursor: pointer;
+
+  h3 {
+    font-family: "Roboto";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .Language_Img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+  }
+  .rotate {
+    transform: rotate(91deg);
+  }
+}
+
+.custom-select-options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 30px;
+  width: 190px;
+  gap: 1px;
+
+  // border: 1px solid #ccc;
+  background: #ffffff;
+  border-top: none;
+  z-index: 4;
+
+  li {
+    list-style-type: none;
+    h4 {
+      font-family: "Roboto";
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+}
+
+.custom-select-option {
+  padding: 3px;
+  cursor: pointer;
+  background: #ffffff;
+  // box-shadow: 10px 10px 5px grey;
+}
+
+.custom-select-option:hover {
+  background-color: #f0f0f0;
+}

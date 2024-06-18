@@ -1,0 +1,124 @@
+.Peculiarities {
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .Peculiarities_h2 {
+    font-family: "Roboto";
+    text-align: center;
+    width: 600px;
+    height: 90px;
+
+    font-size: 35px;
+
+    color: var(--primary-color);
+
+    margin: 20px auto 20px;
+  }
+
+  h4 {
+    font-family: "Roboto";
+    text-align: center;
+    font-weight: 400;
+    line-height: 3px;
+
+    width: 600px;
+    height: 20px;
+
+    color: var(--primary-hover-color);
+  }
+
+  .Peculiarities_container {
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .container_text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 30px;
+    // max-height: 4%;
+    max-width: 600px;
+
+    h3 {
+      font-family: "Roboto";
+      height: 30px;
+      font-weight: 400;
+      color: var(--primary-hover-color);
+      width: 400px;
+    }
+
+    .text_card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 170px;
+
+      .card_img {
+        width: 69px;
+        height: 69px;
+        img {
+          width: 69px;
+          height: 69px;
+        }
+      }
+      .card_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 480px;
+        height: 60px;
+
+        h2 {
+          width: 480px;
+
+          height: 20px !important;
+          margin: 20px auto 15px;
+          text-align: center;
+          font-family: "Roboto";
+          font-weight: 600;
+          font-size: 20px;
+          color: var(--primary-color);
+        }
+        h3 {
+          font-family: "Roboto";
+          width: 550px;
+
+          letter-spacing: 1px;
+
+          word-spacing: 3px;
+
+          height: 50px;
+          max-width: 360px;
+
+          font-weight: 400;
+          font-size: 16px;
+          color: var(--primary-hover-color);
+        }
+      }
+    }
+  }
+
+  .container_img {
+    max-width: 650px;
+    max-height: 450px;
+    img {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      object-fit: cover;
+      background-size: cover;
+    }
+  }
+}

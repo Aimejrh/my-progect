@@ -1,0 +1,103 @@
+.Doctorsprof {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  height: 100%;
+
+  gap: 8%;
+
+  .Doctorsprof_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .Doctorsprof_text_h2 {
+      text-align: center;
+      font-family: "Roboto";
+      width: 100%;
+      font-size: 35px;
+      color: var(--primary-color);
+    }
+    .Doctorsprof_text_p {
+      font-family: "Roboto";
+
+      text-align: center;
+
+      width: 400px;
+
+      font-size: 16px;
+
+      opacity: 0.8;
+
+      color: var(--Text_Color);
+    }
+  }
+
+  .Doctorsprof_ul {
+    padding: 100px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    height: 100%;
+    width: 100%;
+
+    .Doctorsprof_ul_li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 20px;
+
+      height: 430px;
+      width: 360px;
+
+      gap: 10px;
+
+      .Doctorsprof_img {
+        max-width: 360px;
+        width: 100%;
+        max-height: 240px;
+        height: 100%;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-size: cover;
+      }
+      h2 {
+        max-width: 360px;
+        max-height: 30px;
+
+        font-family: "Roboto";
+        font-size: 20px;
+      }
+      h3 {
+        max-width: 360px;
+        max-height: 20px;
+
+        font-family: "Roboto";
+      }
+      p {
+        max-width: 230px;
+        max-height: 50px;
+
+        font-family: "Roboto";
+      }
+      a {
+        max-width: 360px;
+
+        max-height: 60px;
+
+        text-decoration: none;
+
+        button {
+          max-width: 360px;
+
+          font-family: "Roboto";
+        }
+      }
+    }
+  }
+}

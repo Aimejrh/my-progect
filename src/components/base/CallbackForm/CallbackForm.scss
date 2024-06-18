@@ -1,0 +1,68 @@
+.callback-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .clinic-info,
+    .callback-info {
+      width: 45%;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  form {
+    label {
+      display: block;
+      margin-bottom: 10px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      textarea {
+        resize: vertical;
+        height: 100px;
+      }
+    }
+
+    .phone-input {
+      display: flex;
+
+      select {
+        width: 80px;
+        margin-right: 10px;
+      }
+    }
+
+    button {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.docCard {
+  height: 100%;
+  max-height: 900px;
+
+  padding: 40px 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+
+  background-color: var(--bg-color);
+
+
+  .docCard_text {
+    color: var(--primary-color);
+    max-height: 30px;
+    // margin: 40px auto 50px;
+
+    text-align: center;
+
+    font-family: "roboto";
+
+    font-size: 35px;
+  }
+
+  .docCard_ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    height: 100%;
+    min-height: 400px;
+
+    gap: 20px;
+  }
+
+  @media (max-height: 1240px) {
+
+    .docCard_ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      height: 100%;
+      // min-height: 400px;
+
+      gap: 30px;
+    }
+  }
+
+}

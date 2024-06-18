@@ -1,0 +1,17 @@
+.Gmail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100%;
+  background-color: var(--primary-color);
+  .Gmail_h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color);
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 400;
+  }
+}

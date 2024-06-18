@@ -1,0 +1,59 @@
+.Guarantee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 500px;
+  padding: 40px 20px;
+  background-color: var(--bg-c-col);
+
+  gap: 40px;
+
+  .Guarantee_h2 {
+    text-align: center;
+    width: 100%;
+    max-height: 40px;
+    font-family: "Roboto";
+    font-size: 28px;
+  }
+
+  .Guarantee_ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-height: 300px;
+    max-width: 1200px;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      max-height: 300px;
+      max-width: 330px;
+      gap: 30px;
+      img {
+        max-width: 80px;
+        max-height: 80px;
+      }
+      h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Roboto";
+        max-height: 30px;
+      }
+      p {
+        text-align: center;
+        font-family: "Roboto";
+        max-height: 300px;
+      }
+    }
+    hr {
+      background: var(--primary-hover-color);
+      color: var(--primary-hover-color);
+      height: 2px;
+      transform: rotate(90deg);
+    }
+  }
+}

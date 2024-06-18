@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#root {
+  height: 100%;
+}
+
+.lp {
+  &-content {
+    flex-grow: 1;
+    padding: $content-gap-y $content-gap-x;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .lp {
+    &-content {
+      padding: $content-gap-y-sm $content-gap-x-sm;
+    }
+  }
+}

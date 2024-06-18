@@ -1,0 +1,60 @@
+.Services {
+  padding-top: 70px;
+
+  .Services_h2 {
+    font-family: "Roboto";
+    text-align: center;
+    width: 600px;
+    height: 40px;
+    font-size: 35px;
+    color: var(--primary-color);
+    margin: 20px auto 20px;
+  }
+
+  .Services_p {
+    height: 30px;
+    text-align: center;
+    color: var(--Text_Color);
+    opacity: 0.8;
+    font-family: "Roboto";
+    font-size: 18px;
+  }
+
+  .Services_ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    gap: 20px;
+    li {
+      width: 300px;
+      padding: 15px 10px;
+      img {
+        width: 300px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
+        background-size: cover;
+      }
+      h3 {
+        display: flex;
+        font-family: "Roboto";
+        flex-wrap: wrap;
+        height: 40px;
+        font-size: 18px;
+        color: var(--Text_Color);
+        opacity: 0.7;
+      }
+      a{
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 300px;
+        height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,1602 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "256e3fb9-e5d9-4739-a1f9-8ff0693040be",
+      "name": "mis-backend Copy",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2024-06-16T07:07:46.000Z",
+      "uid": "32592177-256e3fb9-e5d9-4739-a1f9-8ff0693040be",
+      "createdAt": null,
+      "lastUpdatedBy": null
+    },
+    "item": [
+      {
+        "name": "PROD",
+        "item": [
+          {
+            "name": "Role",
+            "item": [
+              {
+                "name": "createRole",
+                "id": "fa8ee41b-24ed-445e-8687-a98b7ff2dc6a",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "noauth"
+                  },
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\" : \"ADMIN\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/roles",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "roles"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-fa8ee41b-24ed-445e-8687-a98b7ff2dc6a"
+              },
+              {
+                "name": "getRoleById",
+                "id": "e771fc52-0888-4bbf-a3cb-c5c4674c7100",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/roles/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "roles",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-e771fc52-0888-4bbf-a3cb-c5c4674c7100"
+              },
+              {
+                "name": "getAllRoles",
+                "id": "1e9418e8-960e-49d5-9977-e318784ceb91",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/roles",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "roles"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-1e9418e8-960e-49d5-9977-e318784ceb91"
+              },
+              {
+                "name": "updateRole",
+                "id": "5d08bcfa-38c3-4527-8710-96410b8bfe08",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "PUT",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\" : \"USER_ROLE\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/roles/6",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "roles",
+                      "6"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-5d08bcfa-38c3-4527-8710-96410b8bfe08"
+              },
+              {
+                "name": "deleteRole",
+                "id": "3abc09d9-988a-4e3e-bf48-2ea82ff9d340",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "DELETE",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/roles/6",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "roles",
+                      "6"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-3abc09d9-988a-4e3e-bf48-2ea82ff9d340"
+              }
+            ],
+            "id": "4fd41a95-dbcd-439c-af6e-7c8c36152fb1",
+            "uid": "32592177-4fd41a95-dbcd-439c-af6e-7c8c36152fb1"
+          },
+          {
+            "name": "Department",
+            "item": [
+              {
+                "name": "createDepartment",
+                "id": "c8ed524a-304e-4ad2-8da2-496fd49932b2",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\" : \"Педиатрия\",\n    \"description\" : \"Отдел педиатрии\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "http://localhost:9090/api/departments",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "departments"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-c8ed524a-304e-4ad2-8da2-496fd49932b2"
+              },
+              {
+                "name": "getDepartmentById",
+                "id": "98546a20-e1fb-452e-8ec2-036ebb6a99b2",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/departments/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "departments",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-98546a20-e1fb-452e-8ec2-036ebb6a99b2"
+              },
+              {
+                "name": "getAllDepartments",
+                "id": "127f8208-a48e-4349-a4a7-a6bf76c7e846",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/departments",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "departments"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-127f8208-a48e-4349-a4a7-a6bf76c7e846"
+              },
+              {
+                "name": "updateDepartment",
+                "id": "8b7a953d-a597-4857-b2ac-8f407a242718",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "PUT",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n       \"name\": \"Кардиология(Updated)\",\n       \"description\": \"Отдел кардиологии(Updated)\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/departments/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "departments",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-8b7a953d-a597-4857-b2ac-8f407a242718"
+              },
+              {
+                "name": "deleteDepartment(Не доработан)",
+                "id": "6860dc31-47ac-4c31-9f49-5ab74badacfd",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "DELETE",
+                  "header": [],
+                  "url": {
+                    "raw": "http://localhost:9090/api/department/1",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "department",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-6860dc31-47ac-4c31-9f49-5ab74badacfd"
+              }
+            ],
+            "id": "bc75719f-cf0c-4362-8279-b1b5173e9f1d",
+            "uid": "32592177-bc75719f-cf0c-4362-8279-b1b5173e9f1d"
+          },
+          {
+            "name": "Auth",
+            "item": [
+              {
+                "name": "login",
+                "id": "570c3148-97a7-4b01-9374-a12135c31599",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                      {
+                        "key": "username",
+                        "value": "username",
+                        "type": "text"
+                      },
+                      {
+                        "key": "password",
+                        "value": "password_examplE1!",
+                        "type": "text"
+                      }
+                    ]
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/login",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "login"
+                    ],
+                    "query": [
+                      {
+                        "key": "",
+                        "value": "",
+                        "disabled": true
+                      },
+                      {
+                        "key": "",
+                        "value": null,
+                        "disabled": true
+                      }
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-570c3148-97a7-4b01-9374-a12135c31599"
+              },
+              {
+                "name": "registerDoctor",
+                "id": "62f6c0fc-1226-4b7c-ae83-255c8d5658fe",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"user\" : { \n        \"username\" : \"username\",\n        \"password\" : \"password_examplE1!\",\n        \"email\" : \"baigazakova1999@gmail.com\"\n    },\n    \"doctor\" : { \n        \"firstName\" : \"Айжан\",\n        \"lastName\" : \"Байгазакова\",\n        \"patronymic\" : \"\",\n        \"specialization\" : \"Администратор\",\n        \"phoneNumber\" : \"0700-000-003\",\n        \"departmentId\" : 2\n    }\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/register/doctor",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "register",
+                      "doctor"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-62f6c0fc-1226-4b7c-ae83-255c8d5658fe"
+              },
+              {
+                "name": "registerPatient",
+                "id": "de1ed50f-6af9-4953-b05f-3ce0c0d499e9",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"user\" : { \n        \"username\" : \"patient_username\",\n        \"password\" : \"password_examplE1!\",\n        \"email\" : \"aibaigazakova@gmail.com\"\n    },\n    \"patient\" : { \n        \"firstName\" : \"Имя пациента\",\n        \"lastName\" : \"Фамилия\",\n        \"patronymic\" : \"Отчество\",\n        \"sex\" : \"MALE\", \n        \"dateOfBirth\" : \"2000-01-01\",\n        \"passport\" : \"ID2510861\",\n        \"taxId\" : \"10101200013264\",\n        \"address\" : \"Адрес проживания\",\n        \"placeOfWork\" : \"Место работы пациента(Если нет можно написать - не работает)\",\n        \"phoneNumber\" : \"0700-000-003\"\n    }\n }",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/register/patient",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "register",
+                      "patient"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-de1ed50f-6af9-4953-b05f-3ce0c0d499e9"
+              }
+            ],
+            "id": "3e30b0f4-76b4-4ed1-8b92-b26c9d7677db",
+            "uid": "32592177-3e30b0f4-76b4-4ed1-8b92-b26c9d7677db"
+          },
+          {
+            "name": "Doctor",
+            "item": [
+              {
+                "name": "getDoctorById",
+                "id": "533e821c-5aec-44d4-b38e-65fe6bd5a61d",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "http://localhost:9090/api/doctors/1",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "doctors",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-533e821c-5aec-44d4-b38e-65fe6bd5a61d"
+              },
+              {
+                "name": "getAllDoctors",
+                "id": "89c5dd1c-df80-4685-8aec-1efc379aca9d",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "http://localhost:9090/api/doctors",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "doctors"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-89c5dd1c-df80-4685-8aec-1efc379aca9d"
+              },
+              {
+                "name": "updateDoctor",
+                "id": "8b800068-c685-4b19-b359-6783632415a0",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "PUT",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n        \"firstName\": \"Анатолий (Updated)\",\n        \"lastName\": \"Борисов (Updated)\",\n        \"patronymic\": \"Сергеевич (Updated)\",\n        \"specialization\": \"Невролог (Updated)\",\n        \"qualification\": \"Врач высшей категории (Updated)\",\n        \"departmentId\": 2,\n        \"phoneNumber\": \"2342342 (Updated)\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "http://localhost:9090/api/doctors/1",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "doctors",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-8b800068-c685-4b19-b359-6783632415a0"
+              },
+              {
+                "name": "deleteDoctor(Не доработан)",
+                "id": "92d52414-7643-41a7-ae11-9f339986c43f",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "DELETE",
+                  "header": [],
+                  "url": {
+                    "raw": "http://localhost:9090/api/doctors/1",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "doctors",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-92d52414-7643-41a7-ae11-9f339986c43f"
+              }
+            ],
+            "id": "f2b38b0c-60d0-45ee-bb4f-15d175069dda",
+            "uid": "32592177-f2b38b0c-60d0-45ee-bb4f-15d175069dda"
+          },
+          {
+            "name": "Patient",
+            "item": [
+              {
+                "name": "createPatient",
+                "id": "a4b98d7f-e4a9-404e-976e-99db5c422df2",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": " {   \n    \"firstName\" : \"Сергей\",\n    \"lastName\" : \"Борисов\",\n    \"patronymic\" : \"Николаевич\",\n    \"sex\" : \"MALE\",\n    \"dateOfBirth\" : \"1999-01-01\",\n    \"passport\" : \"AN1771773\",\n    \"taxId\" : \"3552342342\",\n    \"address\" : \"Дом адрес\",\n    \"placeOfWork\" : \"school\",\n    \"phoneNumber\" : \"0700-000-003\"\n }",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "http://localhost:9090/api/patients",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "patients"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-a4b98d7f-e4a9-404e-976e-99db5c422df2"
+              },
+              {
+                "name": "getPatientById",
+                "id": "35015310-8642-4150-a5e6-881487517f3e",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "http://localhost:9090/api/patients/1",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "patients",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-35015310-8642-4150-a5e6-881487517f3e"
+              },
+              {
+                "name": "getAllPatients",
+                "id": "9451f4d7-af6b-4ca5-92c2-036932221310",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "http://localhost:9090/api/patients",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "patients"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-9451f4d7-af6b-4ca5-92c2-036932221310"
+              },
+              {
+                "name": "updatePatient",
+                "id": "530034a1-8a62-4dae-8304-edfbe57b06cb",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "PUT",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"firstName\": \"Ирина\",\n    \"lastName\": \"Федорова\",\n    \"patronymic\": \"Николаевна\",\n    \"gender\": 1,\n    \"dateOfBirth\": \"2000-01-01\",\n    \"passport\": {\n        \"series\": \"ID\",\n        \"number\": \"656565\"\n    },\n    \"taxId\": \"3552342111\",\n    \"address\": {\n        \"country\": \"Kyrgyztan\",\n        \"region\": \"-\",\n        \"district\": \"-\",\n        \"city\": \"Bishkek\",\n        \"street\": \"1st\",\n        \"buildingNumber\": \"12\"\n    },\n    \"phoneNumber\": \"312313131\",\n    \"placeOfWork\": \"office\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "http://localhost:9090/api/patients/1",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "patients",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-530034a1-8a62-4dae-8304-edfbe57b06cb"
+              },
+              {
+                "name": "deletePatient(Не доработан)",
+                "id": "2306ff78-45fd-428e-a432-9a90e67155cf",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "DELETE",
+                  "header": [],
+                  "url": {
+                    "raw": "http://localhost:9090/api/patients/1",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "patients",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-2306ff78-45fd-428e-a432-9a90e67155cf"
+              }
+            ],
+            "id": "ac66ae02-8693-45ad-bdd9-3252549ad25c",
+            "uid": "32592177-ac66ae02-8693-45ad-bdd9-3252549ad25c"
+          },
+          {
+            "name": "Appointment",
+            "item": [
+              {
+                "name": "createAppointment",
+                "id": "731bad3e-4873-4367-bf19-a63fb07eed5e",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"reason\" : \"Прием 2\",\n    \"status\" : \"Запланировано\",\n    \"notes\" : \"(...записи врача)\",\n    \"appointmentDate\" : \"2024-06-19T12:30:00\",\n    \"doctorId\" : 1,\n    \"patientId\" : 1\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/appointments",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "appointments"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-731bad3e-4873-4367-bf19-a63fb07eed5e"
+              },
+              {
+                "name": "getAppointmentById",
+                "id": "af38d1e4-63b4-4c99-be3d-781c96e9c539",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/appointments/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "appointments",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-af38d1e4-63b4-4c99-be3d-781c96e9c539"
+              },
+              {
+                "name": "getAllAppointments",
+                "id": "2c574eab-5a15-4c41-9229-342e95944f57",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/appointments",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "appointments"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-2c574eab-5a15-4c41-9229-342e95944f57"
+              },
+              {
+                "name": "updateAppointment",
+                "id": "46a0d3a7-ab41-4aad-b3dc-cebd3b7ce15e",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "PUT",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"reason\": \"Консультация(updated)\",\n    \"appointmentDate\": \"2024-06-04T12:30:00\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/appointments/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "appointments",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-46a0d3a7-ab41-4aad-b3dc-cebd3b7ce15e"
+              },
+              {
+                "name": "deleteAppointment",
+                "id": "9e9c4c68-c6dc-479b-b564-57582bc3c558",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "DELETE",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/appointments/2",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "appointments",
+                      "2"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-9e9c4c68-c6dc-479b-b564-57582bc3c558"
+              }
+            ],
+            "id": "e5aa8630-4277-4aa3-b3ec-19bbc355a633",
+            "uid": "32592177-e5aa8630-4277-4aa3-b3ec-19bbc355a633"
+          },
+          {
+            "name": "MedicalRecord",
+            "item": [
+              {
+                "name": "createMedRecord",
+                "id": "303f0ccc-c6c1-4d19-9d79-1ea4f892c05c",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"appointmentId\" : 3,\r\n    \"diagnosis\" : \"Диагноз 2\",\r\n    \"prescription\" : \"Назначение новое\",\r\n    \"notes\": \"Примечание\",\r\n    \"recommendation\" : \"Рекомендации врача\"\r\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/medicalRecords",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "medicalRecords"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-303f0ccc-c6c1-4d19-9d79-1ea4f892c05c"
+              },
+              {
+                "name": "getById",
+                "id": "dc20bbdb-a587-4a53-a083-cf4b3fa79b3f",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/medicalRecords/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "medicalRecords",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-dc20bbdb-a587-4a53-a083-cf4b3fa79b3f"
+              },
+              {
+                "name": "getAll",
+                "id": "3d775aa1-c934-49ce-8785-0fa6e20ba326",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/medicalRecords",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "medicalRecords"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-3d775aa1-c934-49ce-8785-0fa6e20ba326"
+              },
+              {
+                "name": "updateMedRecord",
+                "id": "374b4786-1523-4766-b7da-3c68079b1516",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "PUT",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"diagnosis\" : \"Бронхит\",\r\n    \"prescription\" : \"Назначение (обновленное)\",\r\n    \"notes\": \"болеет 3 дня\",\r\n    \"recommendation\" : \"полоскать горло на утром/ночью\"\r\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/medicalRecords/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "medicalRecords",
+                      "1"
+                    ],
+                    "query": [
+                      {
+                        "key": "",
+                        "value": "",
+                        "disabled": true
+                      }
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-374b4786-1523-4766-b7da-3c68079b1516"
+              },
+              {
+                "name": "deleteMedRecord",
+                "id": "dcdc5661-2bf0-4b91-8098-91ba3d28288e",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNjI5MX0.qMqMZGducXLlQ7sNjNystxeEY-U8ZTLxSv8vUstcBkY",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "DELETE",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"appointmentId\" : 1,\r\n    \"medCardId\" : 1,\r\n    \"diagnosis\" : [ \r\n        { \r\n        \"description\" : \"description\",\r\n        \"code\" : \"code\"\r\n        }\r\n    ],\r\n    \"prescription\" : [ \r\n        {\r\n            \"medication\" : \"медикамент\",\r\n            \"dosage\" : \"дозировка\",\r\n            \"instructions\" : \"инструкции\"\r\n        }\r\n    ],\r\n    \"notes\": \"примечание\",\r\n    \"recommendation\" : \"рекомендации\"\r\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/medicalRecords/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "medicalRecords",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-dcdc5661-2bf0-4b91-8098-91ba3d28288e"
+              }
+            ],
+            "id": "99ed8023-326f-48d5-a2ac-82a8d153c70a",
+            "uid": "32592177-99ed8023-326f-48d5-a2ac-82a8d153c70a"
+          },
+          {
+            "name": "ServiceType",
+            "item": [
+              {
+                "name": "createService",
+                "id": "f207edf7-b786-456a-8258-402130767240",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNzk5Mn0.iWDYxW4ERzdhbN5Iyrg5GR-fwrXS9nc5Q8tV7nMgopE",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"name\": \"Первичный прием\",\r\n    \"description\": \"Первичный прием у кардиолога\",\r\n    \"price\": 1000,\r\n    \"departmentId\": 2\r\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/services",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "services"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-f207edf7-b786-456a-8258-402130767240"
+              },
+              {
+                "name": "updateService",
+                "id": "966f43a0-e6a4-4639-8b15-13edbfd51769",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "PUT",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"name\": \"Первичный прием\",\r\n    \"description\": \"Первичный прием у кардиолога\",\r\n    \"price\": 1500,\r\n    \"departmentId\": 2\r\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/services/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "services",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-966f43a0-e6a4-4639-8b15-13edbfd51769"
+              },
+              {
+                "name": "deleteService",
+                "id": "f480b9e6-6005-4087-b437-05f35076b78a",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "DELETE",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/services/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "services",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-f480b9e6-6005-4087-b437-05f35076b78a"
+              },
+              {
+                "name": "getAll",
+                "id": "fe62a7c6-8806-4909-a6b0-b75d29370e08",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/services",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "services"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-fe62a7c6-8806-4909-a6b0-b75d29370e08"
+              },
+              {
+                "name": "getById",
+                "id": "8a6d0de5-2db2-4ed2-a8f8-f3d21eb5de56",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/services/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "services",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-8a6d0de5-2db2-4ed2-a8f8-f3d21eb5de56"
+              }
+            ],
+            "id": "4b025b15-01a0-45f1-b52d-9df3f2b3c9e8",
+            "uid": "32592177-4b025b15-01a0-45f1-b52d-9df3f2b3c9e8"
+          },
+          {
+            "name": "MedCard",
+            "item": [
+              {
+                "name": "getAll",
+                "id": "1dbccb89-3454-4929-b458-32355ef814d7",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNzk5Mn0.iWDYxW4ERzdhbN5Iyrg5GR-fwrXS9nc5Q8tV7nMgopE",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/medCards",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "medCards"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-1dbccb89-3454-4929-b458-32355ef814d7"
+              },
+              {
+                "name": "getById",
+                "id": "09cc4b1c-8dd8-4c2b-8295-c6c0b83dde4a",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNzk5Mn0.iWDYxW4ERzdhbN5Iyrg5GR-fwrXS9nc5Q8tV7nMgopE",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/medCards/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "medCards",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-09cc4b1c-8dd8-4c2b-8295-c6c0b83dde4a"
+              }
+            ],
+            "id": "504442f1-b8a1-4545-b7fc-5f4dd613ca9f",
+            "uid": "32592177-504442f1-b8a1-4545-b7fc-5f4dd613ca9f"
+          },
+          {
+            "name": "User",
+            "item": [
+              {
+                "name": "getUserById",
+                "id": "e9174b5b-c17b-4992-b366-e9617b8b2f6d",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNzk5Mn0.iWDYxW4ERzdhbN5Iyrg5GR-fwrXS9nc5Q8tV7nMgopE",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/users/2",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "users",
+                      "2"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-e9174b5b-c17b-4992-b366-e9617b8b2f6d"
+              },
+              {
+                "name": "getAllUsers",
+                "id": "d66f9e68-151e-4580-95ae-12f5bdf0fa26",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/users",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "users"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-d66f9e68-151e-4580-95ae-12f5bdf0fa26"
+              },
+              {
+                "name": "updateUser",
+                "id": "24a9a837-5ca3-4c31-add4-22db8295137c",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "PUT",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"roles\" : [\n        {   \n            \"id\" : \"1\"\n        },\n        {\n            \"id\" : \"2\"\n        }\n    ]\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "http://localhost:9090/api/users/2",
+                    "protocol": "http",
+                    "host": [
+                      "localhost"
+                    ],
+                    "port": "9090",
+                    "path": [
+                      "api",
+                      "users",
+                      "2"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-24a9a837-5ca3-4c31-add4-22db8295137c"
+              },
+              {
+                "name": "deleteUser",
+                "id": "a098cef2-e0ad-4413-9dfd-b0a7ba0c392f",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "DELETE",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/users/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "users",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-a098cef2-e0ad-4413-9dfd-b0a7ba0c392f"
+              },
+              {
+                "name": "addRoleToUser",
+                "id": "f7eacf91-bbd7-4245-9853-b51c62f075ce",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNzk5Mn0.iWDYxW4ERzdhbN5Iyrg5GR-fwrXS9nc5Q8tV7nMgopE",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "PUT",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/users/addRole?userId=3&roleName=ADMIN",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "users",
+                      "addRole"
+                    ],
+                    "query": [
+                      {
+                        "key": "userId",
+                        "value": "3"
+                      },
+                      {
+                        "key": "roleName",
+                        "value": "ADMIN"
+                      }
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-f7eacf91-bbd7-4245-9853-b51c62f075ce"
+              }
+            ],
+            "id": "db66f756-e9f7-4053-9caa-c7046ad1c8d1",
+            "uid": "32592177-db66f756-e9f7-4053-9caa-c7046ad1c8d1"
+          }
+        ],
+        "id": "b1649ca4-da59-485f-8e1f-3370948b6829",
+        "uid": "32592177-b1649ca4-da59-485f-8e1f-3370948b6829"
+      }
+    ]
+  }
+}

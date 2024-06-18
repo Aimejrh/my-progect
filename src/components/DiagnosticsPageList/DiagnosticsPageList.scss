@@ -1,0 +1,52 @@
+.DiagnosticsPageList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 60px 30px;
+
+  .DiagnosticsPageList_h2 {
+    font-family: "Roboto";
+    text-align: center;
+    width: 600px;
+    height: 90px;
+    font-size: 35px;
+    color: var(--primary-color);
+    margin: 20px auto 20px;
+  }
+  .DiagnosticsPageList_p {
+    font-family: "Roboto";
+    text-align: center;
+    font-weight: 400;
+    height: 40px;
+    color: var(--Text_Color);
+    opacity: 0.7;
+  }
+  .DiagnosticsPageList_ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    li {
+      a {
+        width: 300px;
+        text-decoration: none;
+        img {
+          width: 300px;
+          height: 190px;
+        }
+        p {
+          font-family: "Roboto";
+          width: 300px;
+          color: var(--Text_Color);
+          opacity: 0.6;
+        }
+        h3 {
+          font-family: "Roboto";
+          width: 300px;
+          color: var(--Text_Color);
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

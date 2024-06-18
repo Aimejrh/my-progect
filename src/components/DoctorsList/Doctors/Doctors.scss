@@ -1,0 +1,51 @@
+.Doctors {
+  width: 400px;
+  height: 470px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+
+  .Doctors_img {
+    width: 400px;
+    height: 370px;
+  }
+
+  .Doctors_name {
+    font-family: "Roboto";
+
+    width: 300px;
+    font-size: 22px;
+    color: var(--primary-color);
+  }
+
+  .Doctors_direction {
+    font-family: "Roboto";
+    height: 40px;
+    width: 340px;
+    font-size: 19px;
+    color: var(--Text_Color);
+    opacity: 0.7;
+  }
+
+  .Doctors_hr {
+    border: 1px solid var(--primary-color);
+    width: 250px;
+    height: 1px;
+    right: 0;
+  }
+
+  .Doctors_experience {
+    font-family: "Roboto";
+
+    height: 60px;
+    width: 340px;
+
+    font-size: 14px;
+    color: var(--Text_Color);
+    opacity: 0.6;
+  }
+}

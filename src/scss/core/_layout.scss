@@ -1,0 +1,138 @@
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+
+  > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.row-cols-auto > * {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@for $i from 1 through 6 {
+  .row-cols-#{$i} > * {
+    flex: 0 0 auto;
+    width: calc(100% / $i);
+  }
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: calc((100% / 12) * $i);
+  }
+}
+
+@for $i from 1 through 11 {
+  .offset-#{$i} {
+    margin-left: calc((100% / 11) * $i);
+  }
+}
+
+.g-gs,
+.gy-gs {
+  --bs-gutter-y: 1.75rem;
+}
+
+.g-gs,
+.gx-gs {
+  --bs-gutter-x: 1.75rem;
+}
+
+@for $i from 0 through 5 {
+  $value: if($i == 0, 0, ($i * 0.25) + 0.25) * 1rem;
+  .g-#{$i},
+  .gx-#{$i} {
+    --bs-gutter-x: #{$value};
+  }
+
+  .g-#{$i},
+  .gy-#{$i} {
+    --bs-gutter-y: #{$value};
+  }
+}
+
+@each $breakpoint in sm, md, lg, xl, xxl {
+  $breakpoint-min: map-get($theme-breakpoints, $breakpoint);
+
+  @media (min-width: $breakpoint-min) {
+    .col-#{$breakpoint} {
+      flex: 1 0 0%;
+    }
+
+    .row-cols-#{$breakpoint}-auto > * {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    @for $i from 1 through 6 {
+      .row-cols-#{$breakpoint}-#{$i} > * {
+        flex: 0 0 auto;
+        width: calc(100% / $i);
+      }
+    }
+
+    .col-#{$breakpoint}-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    @for $i from 1 through 12 {
+      .col-#{$breakpoint}-#{$i} {
+        flex: 0 0 auto;
+        width: calc(100% / 12 * $i);
+      }
+    }
+
+    @for $i from 1 through 11 {
+      .offset-#{$breakpoint}-#{$i} {
+        margin-left: calc((100% / 11) * $i);
+      }
+    }
+
+    .g-#{$breakpoint}-gs,
+    .gy-#{$breakpoint}-gs {
+      --bs-gutter-y: 1.75rem;
+    }
+
+    .g-#{$breakpoint}-gs,
+    .gx-#{$breakpoint}-gs {
+      --bs-gutter-x: 1.75rem;
+    }
+
+    @for $i from 0 through 5 {
+      $value: if($i == 0, 0, ($i * 0.25) + 0.25) * 1rem;
+      .g-#{$breakpoint}-#{$i},
+      .gx-#{$breakpoint}-#{$i} {
+        --bs-gutter-x: #{$value};
+      }
+
+      .g-#{$breakpoint}-#{$i},
+      .gy-#{$breakpoint}-#{$i} {
+        --bs-gutter-y: #{$value};
+      }
+    }
+  }
+}
