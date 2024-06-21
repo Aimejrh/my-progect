@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   text-align: center;
-  // justify-content: center;
+  justify-content: flex-start;
 
   max-width: 100%;
   width: 100%;
@@ -52,6 +52,8 @@
   }
 
   @media (min-width: 1400px) {
+    justify-content: center;
+
     .nav_ul {
       display: flex;
     }

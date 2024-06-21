@@ -196,12 +196,13 @@
                     }
                   },
                   "url": {
-                    "raw": "http://localhost:9090/api/departments",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/departments",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "departments"
@@ -301,7 +302,7 @@
                 "uid": "32592177-8b7a953d-a597-4857-b2ac-8f407a242718"
               },
               {
-                "name": "deleteDepartment(Не доработан)",
+                "name": "deleteDepartment",
                 "id": "6860dc31-47ac-4c31-9f49-5ab74badacfd",
                 "protocolProfileBehavior": {
                   "disableBodyPruning": true
@@ -310,12 +311,13 @@
                   "method": "DELETE",
                   "header": [],
                   "url": {
-                    "raw": "http://localhost:9090/api/department/1",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/department/1",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "department",
@@ -352,7 +354,7 @@
                       },
                       {
                         "key": "password",
-                        "value": "password_examplE1!",
+                        "value": "Geronimo123!",
                         "type": "text"
                       }
                     ]
@@ -377,7 +379,7 @@
                       },
                       {
                         "key": "",
-                        "value": null,
+                        "value": "",
                         "disabled": true
                       }
                     ]
@@ -397,7 +399,7 @@
                   "header": [],
                   "body": {
                     "mode": "raw",
-                    "raw": "{\n    \"user\" : { \n        \"username\" : \"username\",\n        \"password\" : \"password_examplE1!\",\n        \"email\" : \"baigazakova1999@gmail.com\"\n    },\n    \"doctor\" : { \n        \"firstName\" : \"Айжан\",\n        \"lastName\" : \"Байгазакова\",\n        \"patronymic\" : \"\",\n        \"specialization\" : \"Администратор\",\n        \"phoneNumber\" : \"0700-000-003\",\n        \"departmentId\" : 2\n    }\n}",
+                    "raw": "{\n    \"user\" : { \n        \"username\" : \"username_example\",\n        \"password\" : \"password_examplE1!\",\n        \"email\" : \"email_example@gmail.com\"\n    },\n    \"doctor\" : { \n        \"firstName\" : \"Имя\",\n        \"lastName\" : \"Фамилия\",\n        \"patronymic\" : \"Отчество\",\n        \"specialization\" : \"Должность/Специализация\",\n        \"phoneNumber\" : \"0500-000-000\",\n        \"departmentId\" : 2\n    }\n}",
                     "options": {
                       "raw": {
                         "language": "json"
@@ -429,11 +431,14 @@
                   "disableBodyPruning": true
                 },
                 "request": {
+                  "auth": {
+                    "type": "noauth"
+                  },
                   "method": "POST",
                   "header": [],
                   "body": {
                     "mode": "raw",
-                    "raw": "{\n    \"user\" : { \n        \"username\" : \"patient_username\",\n        \"password\" : \"password_examplE1!\",\n        \"email\" : \"aibaigazakova@gmail.com\"\n    },\n    \"patient\" : { \n        \"firstName\" : \"Имя пациента\",\n        \"lastName\" : \"Фамилия\",\n        \"patronymic\" : \"Отчество\",\n        \"sex\" : \"MALE\", \n        \"dateOfBirth\" : \"2000-01-01\",\n        \"passport\" : \"ID2510861\",\n        \"taxId\" : \"10101200013264\",\n        \"address\" : \"Адрес проживания\",\n        \"placeOfWork\" : \"Место работы пациента(Если нет можно написать - не работает)\",\n        \"phoneNumber\" : \"0700-000-003\"\n    }\n }",
+                    "raw": "{\n    \"user\" : { \n        \"username\" : \"patient_username12\",\n        \"password\" : \"password_examplE1!\",\n        \"email\" : \"test_example@gmail.com\"\n    },\n    \"patient\" : { \n        \"firstName\" : \"Имя пациента\",\n        \"lastName\" : \"Фамилия\",\n        \"patronymic\" : \"Отчество\",\n        \"sex\" : \"MALE\", \n        \"dateOfBirth\" : \"2000-01-01\",\n        \"passport\" : \"ID2510862\",\n        \"taxId\" : \"10101200013261\",\n        \"address\" : \"Адрес проживания\",\n        \"placeOfWork\" : \"Место работы пациента(Если нет можно написать - не работает)\",\n        \"phoneNumber\" : \"0700-000-001\"\n    }\n }",
                     "options": {
                       "raw": {
                         "language": "json"
@@ -457,6 +462,154 @@
                 },
                 "response": [],
                 "uid": "32592177-de1ed50f-6af9-4953-b05f-3ce0c0d499e9"
+              },
+              {
+                "name": "confirmUser",
+                "id": "88792814-418f-46ed-ac36-c0c0818ed6d3",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\":\"s6384128@gmail.com\",\n    \"confirmCode\":\"9276\"\n}",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/register/confirm",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "register",
+                      "confirm"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-88792814-418f-46ed-ac36-c0c0818ed6d3"
+              },
+              {
+                "name": "forgotPassword",
+                "id": "ffa2ab5a-7014-407d-8f2b-1f828ab05d67",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "POST",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/password/forgot?email=s6384128@gmail.com",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "password",
+                      "forgot"
+                    ],
+                    "query": [
+                      {
+                        "key": "email",
+                        "value": "s6384128@gmail.com"
+                      }
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-ffa2ab5a-7014-407d-8f2b-1f828ab05d67"
+              },
+              {
+                "name": "resetPassword",
+                "id": "3d497b41-4f98-432a-a5a9-0aa284daa0f4",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "POST",
+                  "header": [],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "\n{\n  \"email\": \"s6384128@gmail.com\",\n  \"confirmCode\": \"3691\",\n  \"newPassword\": \"newPassword123!\"\n}\n",
+                    "options": {
+                      "raw": {
+                        "language": "json"
+                      }
+                    }
+                  },
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/password/reset",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "password",
+                      "reset"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-3d497b41-4f98-432a-a5a9-0aa284daa0f4"
+              },
+              {
+                "name": "getuserFromToken",
+                "id": "fd468f72-e2c9-46f5-a508-1b46e3c6b67e",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODkxNDY3NH0.6Vc3OIeD-qcgYje3mq--5D8nqrx1etCr3YMHSt3uWLM",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/users/byToken?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODkyOTA3NH0.9RBDEaaDHe3nS5TzlM4fHvpHe5uHtc1X9Fz67OA3xHs",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "users",
+                      "byToken"
+                    ],
+                    "query": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODkyOTA3NH0.9RBDEaaDHe3nS5TzlM4fHvpHe5uHtc1X9Fz67OA3xHs"
+                      }
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-fd468f72-e2c9-46f5-a508-1b46e3c6b67e"
               }
             ],
             "id": "3e30b0f4-76b4-4ed1-8b92-b26c9d7677db",
@@ -475,12 +628,13 @@
                   "method": "GET",
                   "header": [],
                   "url": {
-                    "raw": "http://localhost:9090/api/doctors/1",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/doctors/1",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "doctors",
@@ -501,12 +655,13 @@
                   "method": "GET",
                   "header": [],
                   "url": {
-                    "raw": "http://localhost:9090/api/doctors",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/doctors",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "doctors"
@@ -523,11 +678,21 @@
                   "disableBodyPruning": true
                 },
                 "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNzk5Mn0.iWDYxW4ERzdhbN5Iyrg5GR-fwrXS9nc5Q8tV7nMgopE",
+                        "type": "string"
+                      }
+                    ]
+                  },
                   "method": "PUT",
                   "header": [],
                   "body": {
                     "mode": "raw",
-                    "raw": "{\n        \"firstName\": \"Анатолий (Updated)\",\n        \"lastName\": \"Борисов (Updated)\",\n        \"patronymic\": \"Сергеевич (Updated)\",\n        \"specialization\": \"Невролог (Updated)\",\n        \"qualification\": \"Врач высшей категории (Updated)\",\n        \"departmentId\": 2,\n        \"phoneNumber\": \"2342342 (Updated)\"\n}",
+                    "raw": "{\n        \"firstName\": \"Анатолий (Updated)\",\n        \"lastName\": \"Борисов (Updated)\",\n        \"patronymic\": \"Сергеевич (Updated)\",\n        \"specialization\": \"Невролог (Updated)\",\n        \"departmentId\": 2,\n        \"phoneNumber\": \"0700-000-000\"\n}",
                     "options": {
                       "raw": {
                         "language": "json"
@@ -535,12 +700,13 @@
                     }
                   },
                   "url": {
-                    "raw": "http://localhost:9090/api/doctors/1",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/doctors/1",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "doctors",
@@ -552,7 +718,7 @@
                 "uid": "32592177-8b800068-c685-4b19-b359-6783632415a0"
               },
               {
-                "name": "deleteDoctor(Не доработан)",
+                "name": "deleteDoctor",
                 "id": "92d52414-7643-41a7-ae11-9f339986c43f",
                 "protocolProfileBehavior": {
                   "disableBodyPruning": true
@@ -561,12 +727,13 @@
                   "method": "DELETE",
                   "header": [],
                   "url": {
-                    "raw": "http://localhost:9090/api/doctors/1",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/doctors/1",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "doctors",
@@ -603,12 +770,13 @@
                     }
                   },
                   "url": {
-                    "raw": "http://localhost:9090/api/patients",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/patients",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "patients"
@@ -628,12 +796,13 @@
                   "method": "GET",
                   "header": [],
                   "url": {
-                    "raw": "http://localhost:9090/api/patients/1",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/patients/1",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "patients",
@@ -654,12 +823,13 @@
                   "method": "GET",
                   "header": [],
                   "url": {
-                    "raw": "http://localhost:9090/api/patients",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/patients",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "patients"
@@ -688,12 +858,13 @@
                     }
                   },
                   "url": {
-                    "raw": "http://localhost:9090/api/patients/1",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/patients/1",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "patients",
@@ -705,7 +876,7 @@
                 "uid": "32592177-530034a1-8a62-4dae-8304-edfbe57b06cb"
               },
               {
-                "name": "deletePatient(Не доработан)",
+                "name": "deletePatient",
                 "id": "2306ff78-45fd-428e-a432-9a90e67155cf",
                 "protocolProfileBehavior": {
                   "disableBodyPruning": true
@@ -714,12 +885,13 @@
                   "method": "DELETE",
                   "header": [],
                   "url": {
-                    "raw": "http://localhost:9090/api/patients/1",
-                    "protocol": "http",
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/patients/1",
+                    "protocol": "https",
                     "host": [
-                      "localhost"
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
                     ],
-                    "port": "9090",
                     "path": [
                       "api",
                       "patients",
@@ -1215,12 +1387,75 @@
                 "uid": "32592177-f207edf7-b786-456a-8258-402130767240"
               },
               {
+                "name": "getById",
+                "id": "8a6d0de5-2db2-4ed2-a8f8-f3d21eb5de56",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/services/1",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "services",
+                      "1"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-8a6d0de5-2db2-4ed2-a8f8-f3d21eb5de56"
+              },
+              {
+                "name": "getAll",
+                "id": "fe62a7c6-8806-4909-a6b0-b75d29370e08",
+                "protocolProfileBehavior": {
+                  "disableBodyPruning": true
+                },
+                "request": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/services",
+                    "protocol": "https",
+                    "host": [
+                      "it-academy-mis-app-eb8b8e2f87d7",
+                      "herokuapp",
+                      "com"
+                    ],
+                    "path": [
+                      "api",
+                      "services"
+                    ]
+                  }
+                },
+                "response": [],
+                "uid": "32592177-fe62a7c6-8806-4909-a6b0-b75d29370e08"
+              },
+              {
                 "name": "updateService",
                 "id": "966f43a0-e6a4-4639-8b15-13edbfd51769",
                 "protocolProfileBehavior": {
                   "disableBodyPruning": true
                 },
                 "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNzk5Mn0.iWDYxW4ERzdhbN5Iyrg5GR-fwrXS9nc5Q8tV7nMgopE",
+                        "type": "string"
+                      }
+                    ]
+                  },
                   "method": "PUT",
                   "header": [],
                   "body": {
@@ -1257,6 +1492,16 @@
                   "disableBodyPruning": true
                 },
                 "request": {
+                  "auth": {
+                    "type": "bearer",
+                    "bearer": [
+                      {
+                        "key": "token",
+                        "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsInJvbGVzIjpbIkFETUlOIiwiRE9DVE9SIl0sImlzcyI6Imh0dHBzOi8vaXQtYWNhZGVteS1taXMtYXBwLWViOGI4ZTJmODdkNy5oZXJva3VhcHAuY29tL2FwaS9sb2dpbiIsImV4cCI6MTcxODUzNzk5Mn0.iWDYxW4ERzdhbN5Iyrg5GR-fwrXS9nc5Q8tV7nMgopE",
+                        "type": "string"
+                      }
+                    ]
+                  },
                   "method": "DELETE",
                   "header": [],
                   "url": {
@@ -1276,59 +1521,6 @@
                 },
                 "response": [],
                 "uid": "32592177-f480b9e6-6005-4087-b437-05f35076b78a"
-              },
-              {
-                "name": "getAll",
-                "id": "fe62a7c6-8806-4909-a6b0-b75d29370e08",
-                "protocolProfileBehavior": {
-                  "disableBodyPruning": true
-                },
-                "request": {
-                  "method": "GET",
-                  "header": [],
-                  "url": {
-                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/services",
-                    "protocol": "https",
-                    "host": [
-                      "it-academy-mis-app-eb8b8e2f87d7",
-                      "herokuapp",
-                      "com"
-                    ],
-                    "path": [
-                      "api",
-                      "services"
-                    ]
-                  }
-                },
-                "response": [],
-                "uid": "32592177-fe62a7c6-8806-4909-a6b0-b75d29370e08"
-              },
-              {
-                "name": "getById",
-                "id": "8a6d0de5-2db2-4ed2-a8f8-f3d21eb5de56",
-                "protocolProfileBehavior": {
-                  "disableBodyPruning": true
-                },
-                "request": {
-                  "method": "GET",
-                  "header": [],
-                  "url": {
-                    "raw": "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/services/1",
-                    "protocol": "https",
-                    "host": [
-                      "it-academy-mis-app-eb8b8e2f87d7",
-                      "herokuapp",
-                      "com"
-                    ],
-                    "path": [
-                      "api",
-                      "services",
-                      "1"
-                    ]
-                  }
-                },
-                "response": [],
-                "uid": "32592177-8a6d0de5-2db2-4ed2-a8f8-f3d21eb5de56"
               }
             ],
             "id": "4b025b15-01a0-45f1-b52d-9df3f2b3c9e8",
@@ -1479,41 +1671,6 @@
                 },
                 "response": [],
                 "uid": "32592177-d66f9e68-151e-4580-95ae-12f5bdf0fa26"
-              },
-              {
-                "name": "updateUser",
-                "id": "24a9a837-5ca3-4c31-add4-22db8295137c",
-                "protocolProfileBehavior": {
-                  "disableBodyPruning": true
-                },
-                "request": {
-                  "method": "PUT",
-                  "header": [],
-                  "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"roles\" : [\n        {   \n            \"id\" : \"1\"\n        },\n        {\n            \"id\" : \"2\"\n        }\n    ]\n}",
-                    "options": {
-                      "raw": {
-                        "language": "json"
-                      }
-                    }
-                  },
-                  "url": {
-                    "raw": "http://localhost:9090/api/users/2",
-                    "protocol": "http",
-                    "host": [
-                      "localhost"
-                    ],
-                    "port": "9090",
-                    "path": [
-                      "api",
-                      "users",
-                      "2"
-                    ]
-                  }
-                },
-                "response": [],
-                "uid": "32592177-24a9a837-5ca3-4c31-add4-22db8295137c"
               },
               {
                 "name": "deleteUser",

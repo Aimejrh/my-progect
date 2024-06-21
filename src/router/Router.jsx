@@ -9,6 +9,10 @@ import DiagnosticsPage from "../Page/DiagnosticsPage";
 import ServicePricesPage from "../Page/ServicePricesPage";
 import RegisterFormPage from "../Page/RegisterFormPage";
 import Profile from "../Page/Profile";
+import DoctorsListPage from "../Page/DoctorsListPage";
+import PasswordPage from "../Page/PasswordPage";
+import ResetPasswordPage from "../Page/ResetPasswordPage";
+import ContactPage from "../Page/ContactPage";
 
 const Routers = () => {
   return (
@@ -18,11 +22,15 @@ const Routers = () => {
       <Route path="/doctors" element={<DoctarsPage />} />
       <Route path="/Connection" element={<ConnectionPage />} />
       <Route path="/Services" element={<ServicesPage />} />
-      <Route path="Diagnostics" element={<DiagnosticsPage />} />
+      <Route path="/Diagnostics" element={<DiagnosticsPage />} />
       <Route path="*" element={<ErrorPage />} />
-      <Route path="ServicePrices" element={<ServicePricesPage />} />
-      <Route path="RegisterForm" element={<RegisterFormPage/>} />
-      <Route path="/profile" element={<Profile/>} />
+      <Route path="/ServicePrices" element={<ServicePricesPage />} />
+      <Route path="/RegisterForm" element={<RegisterFormPage />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/DoctorsList" element={<DoctorsListPage />} />
+      <Route path="/forgotPassword" element={<PasswordPage />} />
+      <Route path="/resetPassword" element={<ResetPasswordPage />} />
+      <Route path="/Contact" element={<ContactPage />} />
     </Routes>
   );
 };

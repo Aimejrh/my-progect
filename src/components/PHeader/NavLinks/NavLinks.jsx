@@ -29,7 +29,7 @@ const NavLinks = () => {
           <Link to={"/ServicePrices"}>цены </Link>
         </li>
         <li>
-          <Link to={"/"}>контакты</Link>
+          <Link to={"/Contact"}>контакты</Link>
         </li>
       </ul>
       <BurgerMenu />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import RegisterPatient from "./RegisterPatient";
 import RegisterDoctor from "./RegisterDoctor";
 import LoginForm from "./Login";
+import "./Register.scss";
 
 const Register = () => {
   const [activeTab, setActiveTab] = useState("appointments");
@@ -10,34 +11,38 @@ const Register = () => {
     setActiveTab(tabName);
   };
 
-  const tabs = ["Процедуры", "Приемы врачей", "Диагностика"];
+  const tabs = ["регистрация", "войти"];
 
   const renderContent = () => {
     switch (activeTab) {
-      case "Приемы врачей":
-        return <RegisterPatient />;
-      case "Процедуры":
-        return <RegisterDoctor/>;
+      case "войти":
+        return <LoginForm />;
       default:
-        "Диагностика";
-        return <><LoginForm/></>;
+        "регистрация";
+        return (
+          <>
+            <RegisterPatient />
+          </>
+        );
     }
   };
 
   return (
-    <div className="ProcedureList" style={{ paddingTop: "90px" }}>
-      <h2 className="ProcedureList_h2">Цены услуг в CSMIS Clinic</h2>
-      <div className="ProcedureList_Button_Container">
+    <div className="Register">
+      <div>
         {tabs.map((tab, index) => (
           <button
             key={index}
             onClick={() => handleTabClick(tab)}
-            className={`tab-button ${activeTab === tab ? "active" : ""}`}
+            className={`tab-button RegisterButtontab  ${
+              activeTab === tab ? "active" : ""
+            }`}
           >
             {tab}
           </button>
         ))}
       </div>
+
       {renderContent()}
     </div>
   );

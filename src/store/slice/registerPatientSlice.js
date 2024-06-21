@@ -1,36 +1,35 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { registerPatient } from "../features/patientAction"; // Импортируем предполагаемое асинхронное действие
 
 const initialState = {
   loading: false,
   success: false,
   error: null,
-  patientData: null,
 };
 
-const patientsSlice = createSlice({
+export const patientSlice = createSlice({
   name: "patients",
   initialState,
-  reducers: {
-    registerPatientStart: (state) => {
-      state.loading = true;
-    },
-    registerPatientSuccess: (state, action) => {
-      state.loading = false;
-      state.success = true;
-      state.patientData = action.payload; // Сохраняем данные пациента
-      console.log("Пациент успешно зарегистрирован:", action.payload);
-    },
-    registerPatientFailure: (state, action) => {
-      state.loading = false;
-      state.error = action.payload;
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+     .addCase(registerPatient.pending, (state) => {
+        state.loading = true;
+        state.success = false;
+        state.error = null;
+      })
+     .addCase(registerPatient.fulfilled, (state) => {
+        console.log("Пациент успешно зарегистрирован");
+        state.loading = false;
+        state.success = true;
+        state.error = null;
+      })
+     .addCase(registerPatient.rejected, (state, action) => {
+        state.loading = false;
+        state.success = false;
+        state.error = action.payload;
+      });
   },
 });
 
-export const {
-  registerPatientStart,
-  registerPatientSuccess,
-  registerPatientFailure,
-} = patientsSlice.actions;
-
-export default patientsSlice.reducer;
+export default patientSlice.reducer;

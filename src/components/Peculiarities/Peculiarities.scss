@@ -120,5 +120,8 @@
       object-fit: cover;
       background-size: cover;
     }
+    @media (max-width: 1030px) {
+      display: none !important;
+    }
   }
 }

@@ -10,7 +10,7 @@ const initialState = {
 export const doctorSlice = createSlice({
   name: "doctors",
   initialState,
-  reducers: {},
+  reducers: {},  
   extraReducers: (builder) => {
     builder
       .addCase(registerDoctor.pending, (state) => {
@@ -19,7 +19,7 @@ export const doctorSlice = createSlice({
         state.error = null;
       })
       .addCase(registerDoctor.fulfilled, (state) => {
-        console.log("fulfilled")
+        console.log("fulfilled");
         state.loading = false;
         state.success = true;
         state.error = null;

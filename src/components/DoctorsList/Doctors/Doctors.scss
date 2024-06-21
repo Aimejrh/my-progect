@@ -48,4 +48,49 @@
     color: var(--Text_Color);
     opacity: 0.6;
   }
+
+  @media (max-height: 830px) {
+    width: 100% !important;
+    height: 470px;
+
+    .Doctors_img {
+      width: 100% !important;
+      height: 370px;
+    }
+
+    .Doctors_name {
+      font-family: "Roboto";
+
+      width: 300px;
+      font-size: 22px;
+      color: var(--primary-color);
+    }
+
+    .Doctors_direction {
+      font-family: "Roboto";
+      height: 40px;
+      width: 340px;
+      font-size: 19px;
+      color: var(--Text_Color);
+      opacity: 0.7;
+    }
+
+    .Doctors_hr {
+      border: 1px solid var(--primary-color);
+      width: 250px;
+      height: 1px;
+      right: 0;
+    }
+
+    .Doctors_experience {
+      font-family: "Roboto";
+
+      height: 60px;
+      width: 340px;
+
+      font-size: 14px;
+      color: var(--Text_Color);
+      opacity: 0.6;
+    }
+  }
 }

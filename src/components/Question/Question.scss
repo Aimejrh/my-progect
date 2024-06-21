@@ -1,12 +1,13 @@
-.Question{
-  height: 150px;
+.Question {
+  height: 130px;
   display: flex;
+  padding: 0  30px;
   justify-content: space-evenly;
   align-items: center;
 
   background-color: var(--bg-c-col);
 
-  .Question_p{
+  .Question_p {
     display: flex;
     align-items: center;
 
@@ -18,7 +19,9 @@
     opacity: 0.8;
 
     font-family: "Roboto";
-  }
 
-  
+    @media (max-width: 950px) {
+      font-size: 18px;
+    }
+  }
 }

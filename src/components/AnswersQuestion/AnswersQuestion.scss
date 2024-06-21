@@ -9,9 +9,18 @@
   height: 650px;
 
   padding: 200px;
+  
+  @media (max-width:1125px) {
+  padding: 300px 100px;
+  }
+
+  @media (max-width:920px) {
+    padding: 300px 30px;
+}
 
   object-fit: contain;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   .AnswersQuestion_inf {

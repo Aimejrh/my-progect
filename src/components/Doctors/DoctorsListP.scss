@@ -1,0 +1,48 @@
+.DoctorsListP {
+  .DoctorsListP_h1 {
+    font-family: "Roboto";
+  }
+  .DoctorsListP_ul {
+    display: flex;
+    padding: 20px;
+    gap: 6px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .DoctorsListP_li {
+      width: 230px;
+      margin-bottom: 20px;
+      .DoctorsListP_li_img {
+        background: var(--bg-col);
+        width: 230px;
+        height: 270px;
+        border-radius: 4px;
+      }
+      .DoctorsListP_update {
+        border: 2px solid var(--primary-color);
+        background-color: var(--primary-color);
+        color: var(--color);
+        font-family: "Roboto";
+        font-size: 18px;
+        padding: 8px 6px;
+        border-radius: 4px;
+        width: 100%;
+
+        margin-top: 10px;
+
+        &:hover {
+          background-color: var(--primary-hover-color);
+        }
+      }
+      .DoctorsListP_h3 {
+        font-family: "Roboto";
+      }
+      .DoctorsListP_p {
+        font-family: "Roboto";
+      }
+      .DoctorsListP_li_h2 {
+        font-family: "Roboto";
+      }
+    }
+  }
+}

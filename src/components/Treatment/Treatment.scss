@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 850px;
+  // max-height: 850px;
   padding: 80px 30px;
   background-color: var(--bg-color);
 
@@ -27,13 +27,18 @@
   }
 
   .Treatment_ul {
-    max-height: 500px;
+    // max-height: 500px;
     max-width: 1200px;
     width: 100% !important;
+    width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
 
     li {
       max-height: 370px;

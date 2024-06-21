@@ -15,8 +15,8 @@ const NavBar = () => {
   return (
     <PHeader>
       <NavLinks/>
-      {/* <Language /> */}
-      <Button Button_text={"записатся на прием"} Button_Style={"signUp"} />
+      {/* <Button Button_text={"записатся на прием"} Button_Style={"signUp"} /> */}
+      <Button Button_text={"регистрация"} Button_Style={"signUp"} Button_link={"RegisterForm"}/>
     </PHeader>
   );
 };

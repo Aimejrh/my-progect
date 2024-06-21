@@ -9,7 +9,7 @@ const DiagnosticsIL = ({
   DiagnosticsIL_But_text,
 }) => {
   return (
-    <li>
+    <li className="Diagnostics_container_li">
       <Link to={`${DiagnosticsIL_links}`}>
         <img src={`${DiagnosticsIL_img}`} alt="img" />
         <p>{DiagnosticsIL_text}</p>

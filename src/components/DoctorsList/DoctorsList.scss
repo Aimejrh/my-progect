@@ -1,6 +1,6 @@
 .docCard {
   height: 100%;
-  max-height: 900px;
+  // max-height: 900px;
 
   padding: 40px 0 40px;
 
@@ -16,8 +16,7 @@
 
   .docCard_text {
     color: var(--primary-color);
-    max-height: 30px;
-    // margin: 40px auto 50px;
+    height: 30px;
 
     text-align: center;
 
@@ -33,9 +32,8 @@
     flex-wrap: wrap;
 
     height: 100%;
-    min-height: 400px;
-
-    gap: 20px;
+    // height: 500px;
+    gap: 30px;
   }
 
   @media (max-height: 1240px) {

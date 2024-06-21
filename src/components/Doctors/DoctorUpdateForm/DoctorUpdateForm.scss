@@ -1,0 +1,78 @@
+.Registercon {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+
+  span {
+    color: red;
+    font-family: "Roboto";
+  }
+
+  label {
+    font-family: "Roboto";
+    font-size: 14px;
+  }
+  input,
+  select {
+    height: 40px;
+    width: 100%;
+
+    font-family: "Roboto";
+
+
+    border: 3px solid var(--primary-color);
+
+    border-radius: 4px;
+
+    &:focus {
+      border: 3px solid var(--primary-hover-color);
+    }
+
+    option {
+      font-family: "Roboto";
+      font-size: 16px;
+      &:hover {
+        background-color: aqua !important;
+      }
+    }
+  }
+  max-width: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+  max-width: 480px;
+  background-color: var(--bg-color);
+  border: 3px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 40px;
+  min-width: 480px;
+  // min-height: 700px;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+
+  label {
+    font-family: "Roboto";
+  }
+}
+
+.UpdateButton {
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--color);
+  font-family: "Roboto";
+  font-size: 18px;
+  padding: 8px 6px;
+  border-radius: 4px;
+
+  margin-top: 20px;
+
+  &:hover {
+    background-color: var(--primary-hover-color);
+  }
+}

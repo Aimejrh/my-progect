@@ -1,31 +1,79 @@
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { createMedicalRecord } from "../../store/slice/medicalRecordsSlice";
 import "./MedicalRecordsComponent.scss";
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchMedicalRecordById } from "../../store/slice/medicalRecordsSlice";
 
-const MedicalRecordsComponent = ({ apiEndpoint, medicalRecordId }) => {
+const CreateMedicalRecordForm = () => {
   const dispatch = useDispatch();
-  const medicalRecord = useSelector(
-    (state) => state.medicalRecords.entities[0]
-  );
-  const loading = useSelector((state) => state.medicalRecords.loading);
-  const error = useSelector((state) => state.medicalRecords.error);
+  const { loading, error } = useSelector((state) => state.medicalRecords);
 
-  React.useEffect(() => {
-    dispatch(fetchMedicalRecordById({ apiEndpoint, medicalRecordId }));
-  }, [dispatch, apiEndpoint, medicalRecordId]);
+  const [appointmentId, setAppointmentId] = useState("");
+  const [diagnosis, setDiagnosis] = useState("");
+  const [prescription, setPrescription] = useState("");
+  const [notes, setNotes] = useState("");
+  const [recommendation, setRecommendation] = useState("");
 
-  if (loading === "loading") return <div>Загрузка...</div>;
-  if (error) return <div>Ошибка: {error}</div>;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(
+      createMedicalRecord({
+        appointmentId,
+        diagnosis,
+        prescription,
+        notes,
+        recommendation,
+      })
+    );
+  };
 
   return (
-    <div>
-      <h2>Детали медицинской записи</h2>
-      <p>Пациент: {medicalRecord?.patient || "Нет данных"}</p>
-      <p>Диагноз: {medicalRecord?.diagnosis || "Нет данных"}</p>
-      <p>Преписание: {medicalRecord?.prescription || "Нет данных"}</p>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <div className="Registercon">
+        <label>ID приема:</label>
+        <input
+          type="text"
+          value={appointmentId}
+          onChange={(e) => setAppointmentId(e.target.value)}
+        />
+      </div>
+      <div className="Registercon">
+        <label>Диагноз:</label>
+        <input
+          type="text"
+          value={diagnosis}
+          onChange={(e) => setDiagnosis(e.target.value)}
+        />
+      </div>
+      <div className="Registercon">
+        <label>Рецепт:</label>
+        <input
+          type="text"
+          value={prescription}
+          onChange={(e) => setPrescription(e.target.value)}
+        />
+      </div>
+      <div className="Registercon">
+        <label>Заметки:</label>
+        <input
+          type="text"
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+        />
+      </div>
+      <div className="Registercon">
+        <label>Рекомендации:</label>
+        <input
+          type="text"
+          value={recommendation}
+          onChange={(e) => setRecommendation(e.target.value)}
+        />
+      </div>
+      <button type="submit">Создать медицинскую запись</button>
+      {loading && <p>Загрузка...</p>}
+      {error && <p>Ошибка: {error}</p>}
+    </form>
   );
 };
 
-export default MedicalRecordsComponent;
+export default CreateMedicalRecordForm;
+
