@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { resetPassword } from "../../store/slice/passwordSlice";
+import img from '../../../public/Spinner@1x-1.0s-200px-200px.svg'
 import { useLocation } from "react-router-dom";
 
 const useQuery = () => {
@@ -32,7 +33,7 @@ const ResetPassword = () => {
             onChange={(e) => setNewPassword(e.target.value)}
           />
         </label>
-        <button type="submit" disabled={loading}>
+        <button type="submit" disabled={<div className="loading"><img src={img} alt="imgLoading" /></div>}>
           Reset Password
         </button>
       </form>

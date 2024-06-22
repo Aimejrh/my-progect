@@ -18,6 +18,11 @@
   justify-content: center;
   align-items: center;
   height: 200px;
+
+  @media (max-width: 630px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .active {

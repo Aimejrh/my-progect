@@ -7,6 +7,8 @@ import appointmentsSlice from "./slice/appointmentsSlice";
 import doctorsSlice from "./slice/doctorsSlice";
 import doctorSlice from "./slice/doctorSlice";
 import authSlice from "./slice/authSlice";
+import confirmSlice from "./slice/ConfirmationRegistrationSlice";
+import patientSlice from "./slice/registerPatientSlice";
 
 const store = configureStore({
   reducer: {
@@ -17,6 +19,8 @@ const store = configureStore({
     doctors: doctorsSlice,
     doctor: doctorSlice,
     auth: authSlice,
+    confirm: confirmSlice,
+    regist: patientSlice,
   },
 });
 

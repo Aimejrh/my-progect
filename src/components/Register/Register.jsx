@@ -1,15 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import RegisterPatient from "./RegisterPatient";
 import RegisterDoctor from "./RegisterDoctor";
 import LoginForm from "./Login";
+import { useSelector } from "react-redux";
 import "./Register.scss";
 
 const Register = () => {
   const [activeTab, setActiveTab] = useState("appointments");
+  const { message, loading } = useSelector((state) => state.confirm);
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
+
+  useEffect(() => {
+    if(message && !loading) {
+      setActiveTab('войти')
+    }
+  }, [message])
 
   const tabs = ["регистрация", "войти"];
 

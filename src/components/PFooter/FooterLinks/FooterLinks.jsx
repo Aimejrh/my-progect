@@ -7,22 +7,22 @@ const FooterLinks = () => {
     <nav className="FooterLinks">
       <ul className="FooterLinks_ul">
         <li>
-          <Link to={"/"}>о клинике </Link>
+          <Link to={"/about"}>о клинике </Link>
         </li>
         <li>
-          <Link to={"/"}>врачи</Link>
+          <Link to={"/doctors"}>врачи</Link>
         </li>
         <li>
-          <Link to={"/"}>услуги </Link>
+          <Link to={"/Services"}>услуги </Link>
         </li>
         <li>
-          <Link to={"/"}>диагностика</Link>
+          <Link to={"/Diagnostics"}>диагностика</Link>
         </li>
         <li>
-          <Link to={"/"}>цены </Link>
+          <Link to={"/ServicePrices"}>цены </Link>
         </li>
         <li>
-          <Link to={"/"}>контакты</Link>
+          <Link to={"/Contact"}>контакты</Link>
         </li>
       </ul>
     </nav>

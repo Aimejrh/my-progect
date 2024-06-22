@@ -56,6 +56,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllDoctors, getDoctorById } from "../../store/slice/doctorsSlice";
 import DoctorUpdateForm from "./DoctorUpdateForm/DoctorUpdateForm";
+import img from "../../../public/Spinner@1x-1.0s-200px-200px.svg"
 import "./DoctorsListP.scss"
 
 const DoctorsListP = () => {
@@ -79,7 +80,7 @@ const DoctorsListP = () => {
     }
   }, [dispatch, selectedDoctorId]);
 
-  if (getAllDoctorsLoading) return <div>Loading...</div>;
+  if (getAllDoctorsLoading) return <div className="loading"><img src={img} alt="imgLoading" /></div>;
   if (error) return <div>Error: {error}</div>;
 
   return (

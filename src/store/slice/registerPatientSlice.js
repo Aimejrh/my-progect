@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { registerPatient } from "../features/patientAction"; // Импортируем предполагаемое асинхронное действие
+import { registerPatient } from "../features/patientActions"; // Импортируем предполагаемое асинхронное действие
 
 const initialState = {
   loading: false,

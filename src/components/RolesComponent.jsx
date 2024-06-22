@@ -1,5 +1,6 @@
-import { get } from 'jquery';
-import React, { useState, useEffect } from 'react';
+import { get } from "jquery";
+import React, { useState, useEffect } from "react";
+import img from "../../public/Spinner@1x-1.0s-200px-200px.svg";
 
 function RolesComponent() {
   const [data, setData] = useState(null);
@@ -8,7 +9,9 @@ function RolesComponent() {
   // Функция для получения данных из API
   const fetchData = async () => {
     try {
-      const response = await get('https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/roles');
+      const response = await get(
+        "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/roles"
+      );
       if (!response.ok) {
         throw new Error(`Ошибка состояния HTTP: ${response.status}`);
       }
@@ -30,13 +33,19 @@ function RolesComponent() {
   }
 
   if (!data) {
-    return <div>Loading...</div>; // Отображение индикатора загрузки, пока данные не будут получены
+    return (
+      <div className="loading">
+        <img src={img} alt="imgLoading" />
+      </div>
+    ); // Отображение индикатора загрузки, пока данные не будут получены
   }
 
   return (
     <ul>
       {data.map((role, index) => (
-        <li key={index}>{role.name} ({role.description})</li> // Предполагается, что каждый объект роли имеет свойства name и description
+        <li key={index}>
+          {role.name} ({role.description})
+        </li> // Предполагается, что каждый объект роли имеет свойства name и description
       ))}
     </ul>
   );

@@ -8,6 +8,7 @@ import {
   createAppointment,
 } from "../../../store/slice/appointmentsSlice";
 import AppointmentUpdateForm from "./AppointmentUpdateForm";
+import img from "../../../../public/Spinner@1x-1.0s-200px-200px.svg"
 
 const AppointmentsList = () => {
   const dispatch = useDispatch();
@@ -57,7 +58,7 @@ const AppointmentsList = () => {
     }));
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="loading"><img src={img} alt="imgLoading" /></div>;
   if (error) return <div>Error: {error}</div>;
 
   return (

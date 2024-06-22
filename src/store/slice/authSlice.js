@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const loginUser = createAsyncThunk(
   "auth/loginUser",
-  async (userData, thunkAPI) => {
+  async ({data: userData, navigate}, thunkAPI) => {
     try {
       const response = await axios.post(
         "https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/login",
@@ -22,7 +22,9 @@ export const loginUser = createAsyncThunk(
 
         // Сохраняем токены в localStorage
         saveTokensToLocalStorage({ access_token, refresh_token });
+        navigate()
       }
+
 
       return response.data; // Возвращаем данные пользователя и токены
     } catch (error) {
@@ -31,10 +33,24 @@ export const loginUser = createAsyncThunk(
   }
 );
 
+
+export const getProfile = createAsyncThunk("get/profile", async () => {
+  try {
+    const { data } = await axios.get(`https://it-academy-mis-app-eb8b8e2f87d7.herokuapp.com/api/users/byToken?token=${localStorage.getItem("accessToken")}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("accessToken")}`
+      },
+    })
+
+    return data.result;
+  } catch (e) {}
+})
+
 const authSlice = createSlice({
   name: "auth",
   initialState: {
-    user: null,
+    user: {},
     error: null,
   },
   reducers: {
@@ -55,7 +71,11 @@ const authSlice = createSlice({
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.error = action.payload;
-      });
+      })
+      .addCase(getProfile.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.error = null;
+      })
   },
 });
 

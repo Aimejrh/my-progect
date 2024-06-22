@@ -13,17 +13,12 @@ function LoginForm() {
   } = useForm();
   const error = useSelector((state) => state.auth.error);
   const user = useSelector((state) => state.auth.user);
+  const { message, loading } = useSelector((state) => state.confirm);
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    dispatch(loginUser(data));
+    dispatch(loginUser({data, navigate:() => navigate("/profile") }));
   };
-
-  useEffect(() => {
-    if (user) {
-      navigate("/profile"); // Перенаправление на страницу "Dashboard"
-    }
-  }, [user, navigate]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

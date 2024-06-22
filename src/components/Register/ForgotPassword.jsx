@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { forgotPassword } from "../../store/slice/passwordSlice";
+import img from "../../../public/Spinner@1x-1.0s-200px-200px.svg"
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +25,7 @@ const ForgotPassword = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
-        <button type="submit" className="RegisterButton" disabled={loading}>
+        <button type="submit" className="RegisterButton" disabled={<div className="loading"><img src={img} alt="imgLoading" /></div>}>
           Send Reset Link
         </button>
       </form>

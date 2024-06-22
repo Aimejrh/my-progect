@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchPatientRecords } from '../../store/slice/patientRecordsSlice';
+import img from "../../..//Spinner@1x-1.0s-200px-200px.svg"
 
 const PatientRecordsComponent = ({ patientId }) => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const PatientRecordsComponent = ({ patientId }) => {
   }, [dispatch, patientId]);
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return <div className="loading"><img src={img} alt="imgLoading" /></div>;
   }
 
   if (status === 'failed') {

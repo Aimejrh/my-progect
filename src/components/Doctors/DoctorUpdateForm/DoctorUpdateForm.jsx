@@ -101,6 +101,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDoctorById, updateDoctor } from "../../../store/slice/doctorsSlice";
+import img from "../../../../public/Spinner@1x-1.0s-200px-200px.svg"
 import "./DoctorUpdateForm.scss"
 
 const DoctorUpdateForm = ({ doctorId, onUpdateDoctor }) => {
@@ -150,7 +151,7 @@ const DoctorUpdateForm = ({ doctorId, onUpdateDoctor }) => {
     onUpdateDoctor();
   };
 
-  if (updateDoctorloading) return <div>Loading...</div>;
+  if (updateDoctorloading) return <div className="loading"><img src={img} alt="imgLoading" /></div>;
   if (error) return <div>Error: {error}</div>;
 
   return (

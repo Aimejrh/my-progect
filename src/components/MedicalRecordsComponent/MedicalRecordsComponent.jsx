@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createMedicalRecord } from "../../store/slice/medicalRecordsSlice";
 import "./MedicalRecordsComponent.scss";
+import img from "../../../public/Spinner@1x-1.0s-200px-200px.svg"
 
 const CreateMedicalRecordForm = () => {
   const dispatch = useDispatch();
@@ -69,7 +70,7 @@ const CreateMedicalRecordForm = () => {
         />
       </div>
       <button type="submit">Создать медицинскую запись</button>
-      {loading && <p>Загрузка...</p>}
+      {loading && <div className="loading"><img src={img} alt="imgLoading" /></div>}
       {error && <p>Ошибка: {error}</p>}
     </form>
   );

@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const registerPatient = createAsyncThunk(
   "patients/registerPatient",
-  async (patientData, thunkAPI) => {
+  async ({patientData, navigate}, thunkAPI) => {
     console.log(patientData);
     try {
       const response = await axios.post(
@@ -15,9 +15,25 @@ export const registerPatient = createAsyncThunk(
         .split("Verification Token:")[1]
         .trim();
       localStorage.setItem("token", token);
+      navigate()
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
+    }
+  }
+);
+
+
+export const confirmRegistration = createAsyncThunk(
+  "auth/confirmRegistration",
+  async ({ email, confirmCode }, thunkAPI) => {
+    try {
+      const response = await axios.post("/api/register/confirm", { email, confirmCode });
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response.data.message || error.message
+      );
     }
   }
 );

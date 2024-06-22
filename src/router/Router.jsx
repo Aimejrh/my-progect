@@ -13,6 +13,7 @@ import DoctorsListPage from "../Page/DoctorsListPage";
 import PasswordPage from "../Page/PasswordPage";
 import ResetPasswordPage from "../Page/ResetPasswordPage";
 import ContactPage from "../Page/ContactPage";
+import ConfirmationRegistration from "../components/ConfirmationRegistration/ConfirmationRegistration";
 
 const Routers = () => {
   return (
@@ -31,6 +32,10 @@ const Routers = () => {
       <Route path="/forgotPassword" element={<PasswordPage />} />
       <Route path="/resetPassword" element={<ResetPasswordPage />} />
       <Route path="/Contact" element={<ContactPage />} />
+      <Route
+        path="/ConfirmationRegistration"
+        element={<ConfirmationRegistration />}
+      />
     </Routes>
   );
 };

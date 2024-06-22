@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { registerPatient } from "../../store/features/patientActions";
 import { useNavigate } from "react-router-dom";
 
@@ -11,6 +11,7 @@ const RegisterPatient = () => {
     formState: { errors },
   } = useForm();
   const dispatch = useDispatch();
+  const {success} = useSelector(state => state.regist)
   const navigate = useNavigate();
 
   const onSubmit = async (data) => {
@@ -24,15 +25,17 @@ const RegisterPatient = () => {
         firstName: data.patient.firstName,
         lastName: data.patient.lastName,
         patronymic: data.patient.patronymic,
-        specialization: data.patient.specialization,
         phoneNumber: data.patient.phoneNumber,
-        departmentId: Number(data.patient.departmentId),
+        passport: Number(data.patient.passport),
+        dateOfBirth: data.patient.dateOfBirth,
+        taxId: data.patient.taxId,
+        sex: data.patient.sex
       },
     };
 
+    console.log(formattedData)
     try {
-      await dispatch(registerPatient(formattedData));
-      navigate("/profile");
+      dispatch(registerPatient({patientData: formattedData, navigate: () => navigate('/ConfirmationRegistration')}));
     } catch (error) {
       console.error(error);
     }
@@ -189,15 +192,15 @@ const RegisterPatient = () => {
         {errors.patient?.address && <span>Это обязательное поле</span>}
       </div>
 
-      <div className="Registercon">
-        <label htmlFor="placeOfWork">Место работы</label>
+      {/* <div className="Registercon">
+        <label htmlFor="specialization">Место работы</label>
 
         <input
-          id="placeOfWork"
-          {...register("patient.placeOfWork", { required: true })}
+          id="specialization"
+          {...register("patient.specialization", { required: true })}
         />
         {errors.patient?.placeOfWork && <span>Это обязательное поле</span>}
-      </div>
+      </div> */}
 
       <div className="Registercon">
         <label htmlFor="phoneNumber">Номер телефона</label>
@@ -215,6 +218,7 @@ const RegisterPatient = () => {
       <button className="RegisterButton" type="submit">
         Зарегистрироваться
       </button>
+
     </form>
   );
 };

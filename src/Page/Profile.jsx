@@ -3,13 +3,17 @@ import { useNavigate } from "react-router-dom";
 import UsersCard from "../components/UsersCard/UsersCard";
 import AppointmentsList from "../components/AppointmentsList/AppointmentsList";
 import CreateMedicalRecordForm from "../components/MedicalRecordsComponent/MedicalRecordsComponent";
+import { useDispatch } from "react-redux";
+import { getProfile } from "../store/slice/authSlice";
 
 export default function Profile() {
   const [token, setToken] = useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("accessToken");
+    dispatch(getProfile())
 
     if (token) return;
 
@@ -20,7 +24,7 @@ export default function Profile() {
     <div style={{ marginTop: "200px" }}>
       <UsersCard />
       {/* <AppointmentsList/> */}
-      <CreateMedicalRecordForm/>
+      {/* <CreateMedicalRecordForm/> */}
     </div>
   );
 }
