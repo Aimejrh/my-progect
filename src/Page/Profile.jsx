@@ -13,7 +13,7 @@ export default function Profile() {
 
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
-    dispatch(getProfile())
+    dispatch(getProfile());
 
     if (token) return;
 
@@ -21,7 +21,7 @@ export default function Profile() {
   }, []);
 
   return (
-    <div style={{ marginTop: "200px" }}>
+    <div style={{ backgroundColor: "var(--bg-color)" }}>
       <UsersCard />
       {/* <AppointmentsList/> */}
       {/* <CreateMedicalRecordForm/> */}

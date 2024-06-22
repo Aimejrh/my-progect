@@ -143,3 +143,19 @@
   }
 
 }
+
+.RegisterButton {
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--color);
+  font-family: "Roboto";
+  font-size: 18px;
+  padding: 8px 6px;
+  border-radius: 4px;
+
+  margin-top: 40px;
+
+  &:hover {
+    background-color: var(--primary-hover-color);
+  }
+}

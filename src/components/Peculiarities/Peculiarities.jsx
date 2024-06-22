@@ -60,8 +60,12 @@ const Peculiarities = () => {
           </div>
         </div>
         <div className="container_img">
-          <img
+          {/* <img
             src="https://img.freepik.com/free-photo/medical-treatment-with-pills_23-2148168480.jpg?t=st=1717814555~exp=1717818155~hmac=bf5ccc906e50f3d1003c8cf8e03b8a2fe47f4587e81f50cb024d1ab7a7a415a8&w=996"
+            alt="img"
+          /> */}
+          <img
+            src="https://img.freepik.com/free-photo/covid-recovery-center-female-doctor-holding-elder-patient-s-hands_23-2148847830.jpg?size=626&ext=jpg&ga=GA1.1.1285925613.1696873217&semt=ais_user"
             alt="img"
           />
         </div>

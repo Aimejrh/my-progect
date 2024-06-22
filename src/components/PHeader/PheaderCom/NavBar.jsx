@@ -8,16 +8,22 @@ import NavLinks from "../NavLinks/NavLinks";
 import Button from "../../Button/Button";
 
 const NavBar = () => {
-  const { user } = useSelector((state) => state.auth); // Предположим, что пользовательское имя доступно в стейте auth
+  const { user } = useSelector((state) => state.auth);
+  
+  console.log(user);// Предположим, что пользовательское имя доступно в стейте auth
 
   return (
     <PHeader>
       <NavLinks />
       {/* <Button Button_text={"записатся на прием"} Button_Style={"signUp"} /> */}
-      {user ? (
+      {user && Object.keys(user).length ? (
         <Link to={"/profile"} className="NavBar_prof">
-          <p>{user.username}</p>
-          <img className="NavBar_prof_img" src="" alt="img" />
+          <p className="NavBar_prof_p">{user.username}</p>
+          <img
+            className="NavBar_prof_img"
+            src="https://s00.yaplakal.com/pics/pics_original/5/0/6/17827605.jpg"
+            alt="img"
+          />
         </Link>
       ) : (
         <Button

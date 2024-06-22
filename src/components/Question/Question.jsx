@@ -6,7 +6,7 @@ const Question = () => {
   return (
     <div className="Question">
       <p className="Question_p">Есть вопросы? Мы вас проконсультируем</p>
-      <Button Button_Style={"signUp"} Button_text={"оставить заявку"}/>
+      <Button Button_link={"/RecordsPage"} Button_Style={"signUp"} Button_text={"оставить заявку"}/>
     </div>
   );
 };

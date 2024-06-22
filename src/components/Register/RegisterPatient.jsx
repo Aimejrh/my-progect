@@ -12,7 +12,6 @@ const RegisterPatient = () => {
   } = useForm();
   const dispatch = useDispatch();
   const {success} = useSelector(state => state.regist)
-  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
     const formattedData = {
@@ -215,9 +214,10 @@ const RegisterPatient = () => {
         {errors.patient?.phoneNumber && <span>Это обязательное поле</span>}
       </div>
 
-      <button className="RegisterButton" type="submit">
+      <button to="/ConfirmationRegistration" className="RegisterButton" type="submit">
         Зарегистрироваться
       </button>
+
 
     </form>
   );

@@ -37,7 +37,7 @@ const DoctorsList = () => {
           }
         />
       </ul>
-      <Button Button_Style={"signUp"} Button_text={"все врачи"} />
+      <Button Button_Style={"signUp"} Button_link={"/doctors"} Button_text={"все врачи"} />
     </div>
   );
 };

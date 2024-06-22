@@ -14,6 +14,8 @@ import PasswordPage from "../Page/PasswordPage";
 import ResetPasswordPage from "../Page/ResetPasswordPage";
 import ContactPage from "../Page/ContactPage";
 import ConfirmationRegistration from "../components/ConfirmationRegistration/ConfirmationRegistration";
+import RecordsPage from "../Page/RecordsPage";
+import DoctorsRegistrPage from "../Page/DoctorsRegistrPage";
 
 const Routers = () => {
   return (
@@ -36,6 +38,8 @@ const Routers = () => {
         path="/ConfirmationRegistration"
         element={<ConfirmationRegistration />}
       />
+      <Route path="/RecordsPage" element={<RecordsPage />} />
+      <Route path="/doctorsRegistr" element={<DoctorsRegistrPage/>} />
     </Routes>
   );
 };

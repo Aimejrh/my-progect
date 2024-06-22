@@ -6,7 +6,6 @@ function RolesComponent() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
-  // Функция для получения данных из API
   const fetchData = async () => {
     try {
       const response = await get(
@@ -23,7 +22,6 @@ function RolesComponent() {
     }
   };
 
-  // Вызов fetchData при монтировании компонента
   useEffect(() => {
     fetchData();
   }, []);
@@ -37,7 +35,7 @@ function RolesComponent() {
       <div className="loading">
         <img src={img} alt="imgLoading" />
       </div>
-    ); // Отображение индикатора загрузки, пока данные не будут получены
+    );
   }
 
   return (
@@ -45,7 +43,7 @@ function RolesComponent() {
       {data.map((role, index) => (
         <li key={index}>
           {role.name} ({role.description})
-        </li> // Предполагается, что каждый объект роли имеет свойства name и description
+        </li>
       ))}
     </ul>
   );

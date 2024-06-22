@@ -1,0 +1,75 @@
+.UsersCard {
+  flex-direction: column;
+  height: 130px;
+
+  display: flex;
+  // align-items: center;
+  justify-content: end;
+
+  background-image: url(https://img.freepik.com/free-photo/cute-furry-cat-indoors_23-2150679282.jpg);
+  // filter: brightness(50%) saturate(80%);
+  width: 100%;
+  height: 60vh;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+
+  .UsersCard_bg {
+    margin-bottom: -105px;
+    margin-left: 60px;
+  }
+
+  .UsersCard_img {
+    display: flex;
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    background-color: var(--primary-color);
+    img {
+      width: 150px;
+      border-radius: 50%;
+      height: 150px;
+    }
+  }
+  h1 {
+    font-family: "Roboto";
+  }
+}
+
+.UaersRecords {
+  display: flex;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  height: 100%;
+  gap: 40px;
+  .UaersRecords_Div {
+    .UaersRecords_Div_h2 {
+      font-family: "Roboto";
+      height: 70px;
+    }
+    .UaersRecords_Div_p {
+      font-family: "Roboto";
+      font-size: 40px;
+      height: 70px;
+    }
+  }
+}
+
+.UsersCard_Button {
+  button {
+    border: 3px solid var(--primary-color);
+
+    width: 100px;
+    height: 30px;
+    background: none;
+    color: var(--color);
+    &:hover{
+    color: rgb(148, 141, 141);
+    }
+  }
+  margin-top: -60px;
+  width: 100%;
+  top: 30px;
+}

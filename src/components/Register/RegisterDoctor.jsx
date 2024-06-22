@@ -39,7 +39,7 @@ const RegisterDoctor = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
+      <div className="Registercon">
         <label htmlFor="username">Имя пользователя</label>
         <input
           {...register("username", { required: true })}
@@ -48,7 +48,7 @@ const RegisterDoctor = () => {
         />
         {errors.username && <span>Это поле обязательно для заполнения</span>}
       </div>
-      <div>
+      <div className="Registercon">
         <label htmlFor="password">Пароль</label>
         <input
           {...register("password", { required: true })}
@@ -57,7 +57,7 @@ const RegisterDoctor = () => {
         />
         {errors.password && <span>Это поле обязательно для заполнения</span>}
       </div>
-      <div>
+      <div className="Registercon">
         <label htmlFor="email">Email</label>
         <input
           {...register("email", { required: true })}
@@ -66,7 +66,7 @@ const RegisterDoctor = () => {
         />
         {errors.email && <span>Это поле обязательно для заполнения</span>}
       </div>
-      <div>
+      <div className="Registercon">
         <label htmlFor="firstName">Имя</label>
         <input
           {...register("firstName", { required: true })}
@@ -75,7 +75,7 @@ const RegisterDoctor = () => {
         />
         {errors.firstName && <span>Это поле обязательно для заполнения</span>}
       </div>
-      <div>
+      <div className="Registercon">
         <label htmlFor="lastName">Фамилия</label>
         <input
           {...register("lastName", { required: true })}
@@ -84,7 +84,7 @@ const RegisterDoctor = () => {
         />
         {errors.lastName && <span>Это поле обязательно для заполнения</span>}
       </div>
-      <div>
+      <div  className="Registercon">
         <label htmlFor="patronymic">Отчество</label>
         <input
           {...register("patronymic", { required: true })}
@@ -93,7 +93,7 @@ const RegisterDoctor = () => {
         />
         {errors.patronymic && <span>Это поле обязательно для заполнения</span>}
       </div>
-      <div>
+      <div className="Registercon">
         <label htmlFor="specialization">Специализация</label>
         <input
           {...register("specialization", { required: true })}
@@ -104,7 +104,7 @@ const RegisterDoctor = () => {
           <span>Это поле обязательно для заполнения</span>
         )}
       </div>
-      <div>
+      <div  className="Registercon">
         <label htmlFor="phoneNumber">Номер телефона</label>
         <input
           {...register("phoneNumber", { required: true })}
@@ -113,7 +113,7 @@ const RegisterDoctor = () => {
         />
         {errors.phoneNumber && <span>Это поле обязательно для заполнения</span>}
       </div>
-      <div>
+      <div  className="Registercon">
         <label htmlFor="departmentId">ID отделения</label>
         <input
           {...register("departmentId", { required: true })}
@@ -124,7 +124,7 @@ const RegisterDoctor = () => {
           <span>Это поле обязательно для заполнения</span>
         )}
       </div>
-      <button type="submit">Зарегистрироваться</button>
+      <button className="RegisterButton" type="submit">Зарегистрироваться</button>
     </form>
   );
 };
